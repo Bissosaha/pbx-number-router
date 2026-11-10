@@ -5,6 +5,12 @@ A small system for managing phone numbers and routing inbound calls to SIP exten
 FreePBX falls back to top-to-bottom matching when many extensions share a prefix. This project works around that by generating the routing from a database: a Flask web panel manages users and number blocks, and a Telegram bot (WuidoBot) lets an admin bulk-upload .txt number lists and allocate them to extensions.
 
 ## Architecture
+```mermaid
+flowchart LR
+  A["Admin Telegram bot (Docker)"] -->|API key| B["Flask panel + MariaDB"]
+  B -->|writes config, reloads| C["Asterisk / FreePBX"]
+  D["Softphone"] <-->|SIP| C
+```
 - Asterisk / FreePBX on a Linux VPS: SIP and call routing
 - Web panel (panel/, Flask + MariaDB): users, extensions, number allocation; writes Asterisk config and reloads it
 - Telegram bot (bot/, aiogram + SQLite, Docker): bulk upload and allocation; talks to the panel API
