@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* 1. Global Dark Theme */
+body {
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    color: #e2e8f0;
+}
+
+/* =========================================
+   2. LOGIN PAGE SPECIFIC STYLES
+   ========================================= */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* The Central White/Frosted Card */
+.login-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+/* Icon Styling */
+.login-icon-header {
+    font-size: 50px;
+    color: #3b82f6;
+    margin-bottom: 10px;
+}
+
+/* Typography inside the card */
+.login-card h2 {
+    color: #1e293b;
+    margin: 0 0 5px 0;
+    font-size: 26px;
+    font-weight: 600;
+}
+.login-card p {
+    color: #64748b;
+    font-size: 13px;
+    margin: 0 0 25px 0;
+}
+
+/* Input Field Container (for the lock icon) */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.input-group label {
+    display: block;
+    font-size: 12px;
+    color: #1e293b;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 38px;
+    color: #94a3b8;
+}
+.login-input {
+    width: 100%;
+    padding: 12px 12px 12px 40px; /* Padding for the icon */
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: inherit;
+    color: #334155;
+    transition: border-color 0.3s;
+}
+.login-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+/* Styled Gradient Button */
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to right, #3b82f6, #6366f1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Elegant Developer Footer */
+.developer-credit {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #cbd5e1;
+    letter-spacing: 0.5px;
+}
+.developer-credit span {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* =========================================
+   3. DASHBOARD SPECIFIC STYLES
+   ========================================= */
+.main-white-card {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    width: 95%;
+    max-width: 1000px;
+    margin: 30px auto;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.nav-container {
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.nav-pill {
+    background: rgba(255, 255, 255, 0.05);
+    color: #cbd5e1;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.nav-pill:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.nav-logout {
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+    border-color: rgba(239, 68, 68, 0.3);
+    text-decoration: none;
+}
+.nav-logout:hover {
+    background: #ef4444 !important;
+    color: white !important;
+}
+
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
+.stat-card { padding: 30px 20px; border-radius: 16px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.stat-purple { background: linear-gradient(135deg, #6366f1, #4f46e5); color: white; }
+.stat-cyan { background: linear-gradient(135deg, #0ea5e9, #0284c7); color: white; }
+.stat-pink { background: linear-gradient(135deg, #ec4899, #db2

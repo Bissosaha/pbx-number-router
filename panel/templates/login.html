@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        
+        body {
+            background: #2F0410;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        /* The Login Card - Now Pure White and Mobile Responsive */
+        .login-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 380px; /* Limits width on PC, fills screen on phone */
+            box-sizing: border-box;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .login-icon { font-size: 50px; color: #3b82f6; margin-bottom: 15px; }
+        .login-card h2 { color: #1e293b; margin: 0 0 5px 0; font-size: 24px; }
+        .login-card p { color: #64748b; font-size: 13px; margin: 0 0 25px 0; }
+        
+        .input-group { position: relative; margin-bottom: 20px; }
+        .input-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #94a3b8; }
+        .login-input {
+            width: 100%; padding: 14px 14px 14px 45px;
+            border: 1px solid #cbd5e1; border-radius: 10px;
+            box-sizing: border-box; font-family: inherit; font-size: 15px;
+        }
+        .login-input:focus { outline: none; border-color: #3b82f6; }
+        
+        .btn-login {
+            width: 100%; padding: 14px;
+            background: linear-gradient(to right, #3b82f6, #6366f1);
+            color: white; border: none; border-radius: 10px;
+            font-size: 16px; font-weight: 600; cursor: pointer;
+        }
+        
+        .developer-credit { margin-top: 30px; font-size: 13px; color: #cbd5e1; }
+        .developer-credit span { color: #ffffff; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="login-icon"><i class="fa-solid fa-users-cog"></i></div>
+        <h2>Admin Login</h2>
+        <p>Enter your credentials to access the panel</p>
+        
+        <form method="POST">
+            <div class="input-group">
+                <i class="fa-solid fa-lock input-icon"></i>
+                <input type="password" name="password" class="login-input" placeholder="Enter admin password" required>
+            </div>
+            <button type="submit" class="btn-login"><i class="fa-solid fa-sign-in-alt"></i> Login &rarr;</button>
+        </form>
+    </div>
+    <div class="developer-credit">Developed by <span>Bishwajit Saha</span></div>
+</body>
+</html>

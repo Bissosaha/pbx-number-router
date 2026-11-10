@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  widow_bot:
+    build: ./bot
+    container_name: widow_production_bot
+    restart: unless-stopped
+    network_mode: "host"
+    environment:
+      - PYTHONUNBUFFERED=1
+    env_file:
+      - .env
+    volumes:
+      - ./weido_vault.db:/app/weido_vault.db
